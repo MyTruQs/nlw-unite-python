@@ -16,7 +16,7 @@ class CheckInRepository:
                 return attendee_id
             
             except IntegrityError:
-                raise Exception('Evento ja cadastrado!')
+                raise Exception('Check in ja cadastrado!')
             except Exception as exception:
                 database.session.rollback()
                 raise exception
